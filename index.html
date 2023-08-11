@@ -1,0 +1,248 @@
+<html>
+    <head>
+        <title>Darkchain-Next generation backchain</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="souce/icons8-hot-chocolate-with-marshmallows-24.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-yskH3h6D0B4Pk25TAh5n9mJv8LJyUmAkiy1TA7iJZhB9+rW+i5/3p0EiS2RvD1M" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>        
+    <main>
+            <section>
+                <h1>The future of blockchain is asynchronous.</h1>
+                <h3><strong>Darkchain</strong> is a novel smart contract platform designed to power the the next generation of decentralized applications.</h3>
+                <p class="section-paragraph">Join the community!</p>
+                <!----Shear button remain-->
+                <button class="button">Learn More</button>
+            </section>
+            <section>
+                <h2 class="section-heading">Introduction Darkchain</h2>
+                <p class="section-paragraph">Darkchain is an <strong>asynchronous</strong>,<strong>event-driven</strong> smart contract platform that's designed to be blazing fast, massively scalable, and free to use.</p>
+                <p class="section-paragraph">The architecture of the Darkchain network unlocks powerful new capabilities that most other blockchains simply can't offer, like <strong>no-fee transactions</strong>,<strong> instant finality</strong>, <strong>provably secure on-chain randomness</strong>, <strong>scheduled execution</strong>,<strong> on-chain event listeners</strong>,<strong> automation</strong>, <strong>prioritization</strong>, and so much more.</p>
+            </section>
+            <div class="special-div">
+                <h2 class="special-heading">Heads up!</h2>
+                <p class="special-paragraph">The Darkchain network is currently in a pre-release stage, and it's not yet open to the public. The entire Darkchain platform is intended to be open-source, however we're currently working hard to get it ready for launch and we're not quite ready to open it up to the world. We're excited to share our progress with the community in the coming months, and we'll be releasing more details about the Darkchain platform as we get closer to launch.</p>
+            </div>
+            <section>
+                <h2 class="section-heading">Playing with D-Chain</h2>
+                <p class="section-paragraph">Darkchain is an asynchronous smart contract platform designed for the next generation of decentralized applications. It's built on top of the <a href="#" class="click-animate"> Async VM (DVM)</a>, a virtual machine capable of executing complex smart contract logic in a controlled, deterministic environment.<strong>Pyro </strong> is our async-first smart contract language that's designed to be intuitive and familiar to both Web2 and Web3 developers. Darkchain is similar to other smart contract platforms like Ethereum, Cosmos, Solana, or Polkadot, but there are some key differences that set Darkchain apart.</p>
+            </section>
+            <section>
+                <h2 class="section-heading">The Async VM</h2>
+                <p class="section-paragraph">The most fundamental difference is that the <strong>DVM is fully asynchronous</strong>, meaning that it processes almost everything, from native token transfers to complex smart contract calls, in parallel. Smart contracts that run on other chains operate in a synchronous fashion, meaning that every line of code is executed serially—including invocations of other smart contracts' functions. But within the AVM, most types of operations, like smart contract function calls, are non-blocking and may not run immediately. This means that<strong>Darkchain is blazing fast </strong>and can easily scale to processing thousands of transactions per second, but it does require developers to think a little differently when building decentralized systems.</p>
+                <p class="section-paragraph">The AVM's unique architecture allows for an inherently more efficient and scalable network. It also enables smart contract automation through <strong>on-chain event listeners</strong> and <strong>scheduled execution</strong>, as well as <strong>provably secure on-chain randomness.</strong></p>
+            </section>
+            <section>
+                <h2 class="section-heading">HotDAG</h2>
+                <p class="section-paragraph">Darkchain uses a <a href="#" class="click-animate">directed acyclic graph (DAG)</a>-based ledger model called<strong> HotDAG </strong>that shares traits with <a href="#" class="click-animate">IOTA's Tangle </a>and <a href="#" class="click-animate">Nano's block-lattice </a>architectures. Every address—both user-owned accounts and smart contracts—essentially has its own ledger. Each entry represents exactly one transaction and refers to the hash of a previous entry. One benefit of this approach is that many transactions can be recorded simultaneously, thereby massively increasing the capacity of the network.</p>
+                <p class="section-paragraph">Every Darkchain transaction is divided into two parts—a request and response—similar to the way web requests work. Once a request is received, it is permanently recorded to the account's ledger, a context-dependent execution is queued, and the response is generated asynchronously. This decoupling allows the network to handle far more concurrent users than most other blockchain networks.</p>
+            </section>
+            <section>
+                <h2 class="section-heading">Consensus</h2>
+                <p class="section-paragraph">Darkchain utilizes a Delegated Proof-of-Stake (DPoS) consensus mechanism. As guardians of the network, validators participate in consensus groups that process messages and propose state changes. Validators can choose to participate in either <strong>selective</strong> or <strong>global</strong> consensus, which meanshighly successful projects can scale independently of the network as a whole. Learn more about <a href="#" class="click-animate">Darkchain's approach to consensus</a> in our architecture guide.</p>
+                <p class="section-paragraph">Validators stake to become bonded and earn the right to participate in consensus, and those found to be out of integrity—for example, attempting to reorganize history or make invalid state changes—are subject to penalties up to and including the loss of their bond.</p>
+            </section>
+        <div class="special-div">
+            <h2 class="special-heading">Selective vs Global Consensus</h2>
+            <p class="special-paragraph">By default, validators are part of the global consensus group and agree to process transactions for any participant of the network. This is the only form of consensus that generates protocol-level rewards.They may, instead, elect to only process transactions for whitelisted addresses (or to exclude those from a blacklist). This is called a selective validator, and the most common use case is to support indepent scaling of specific projects. Selective validators aren't eligible for protocol-level rewards, but the decentralized apps they support can implement various forms of incentivization if they choose.</p>
+        </div>
+        <section>
+            <h2 class="section-heading">Transactions</h2>
+            <p class="section-paragraph">Darkchain transactions are generally one-way messages that are categorized as requests, responses, or notifications. When a message is sent to the network, the relevant consensus group records the request to the sender's account chain and queues a context-dependent execution. Once the execution is complete, the response (if any) is asynchronously made available to the caller. This decoupling allows the network to handle a wide range of advanced use cases, and it enables the AVM to process transactions in parallel.</p>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">Request/Response vs notifications</h2>
+            <p class="special-paragraph">A request is a message that expects a response. A response is a message that is sent in reference to one or more requests. A notification is a message that does not expect a response. Notifications are most commonly the result of broadcasting an event to other participants on the network.</p>
+        </div>
+        <section>
+            <p class="section-paragraph">Transactions can be initiated in one of three ways:</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Direct</strong> messages are initiated directly from one account to another, where either party may be a smart contract or user-owned account. This is the simplest form of transaction and is the most common way to use the network.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Indirect</strong>messages are generated by the network, or initiated by one account on behalf of another, such as a custodial service or a smart contract that acts as a proxy for other accounts. Permission to initiate any indirect transaction is controlled exclusively and explicitly by the account's owner.</p> 
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Scheduled</strong>transactions are initiated by an account and relayed by a validator on their behalf at some point in the future once a certain condition is met, like the passage of a particular amount of time. A scheduled transaction can be canceled at any time before it is relayed.</p>
+                </li>
+            </ul>
+            <p class="section-paragraph">Note that all transactions must contain a valid signature from the requesting account, and the network verifies the signature before including it in a block. This ensures that even trusted custodians and intermediaries can't execute transactions on behalf of other accounts without the owner's explicit permission.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Heat</h2>
+            <p class="section-paragraph">Community buy-in and participation are crucial to a fair, open, democratically-controlled network. That's why we use a dynamic resource sharing system rather than charging fees for every transaction. This system is called <strong>heat</strong>, and you can learn more about <a href="#" class="click-animate">how heat works</a> in the Guides.</p>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">Heat replaces fees</h2>
+            <p class="special-paragraph">Heat is not a fee; it works like a rate limit. It's designed to protect the network from spam and other attacks, and it's an effective way to ensure that the network is used for its intended purpose. Accounts that bump up against their heat capacity will be temporarily throttled until they cool off. In this way, heat acts as a dynamic rate limiting mechanism that can be adjusted over time to adapt to the needs of the network.</p>
+        </div>
+        <section>
+            <p class="section-paragraph">Using the network is free, but not unlimited. As an account's activity grows, so does the amount of heat it generates. The network won't accept requests from overheated accounts.</p>
+            <p class="section-paragraph">There are some ways to boost heat tolerance:</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Staking </strong>is the most direct way to increase an account's heat tolerance. The more you stake, the higher your heat tolerance, so it's easy to guarantee yourself access to whatever level of throughput you need. Staking earns you rewards, but it requires a commitment of economic resources so it's not a good fit for everyone.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>One-off Proof-of-Work(PoW) solutions </strong> offer a small, temporary boost to heat tolerance. It's generally just enough for one or two transactions but can vary with network demands. While Darkchain is not a PoW-based network, it is PoW-enabled to support certain protocol-level features, like generating and verifying ZK proofs. This means that anyone with a modern computer or mobile device can request work and submit a valid solution to the network and earn a small reward in the form of heat tolerance and/or tokens. This is an easy way to get started with Darkchain, and it's a great way to support the network if you're not ready to stake yet.</p>
+                </li>
+            </ul>
+            <p class="section-paragraph">Additionally, accounts can delegate and/or share their heat tolerance with others, which is especially useful for things like proxy accounts, shared wallets, pools, custodial services, and low-friction user onboarding. It's also possible to temporarily lease heat tolerance to other accounts. The Darkchain Foundation may also offer supplemental heat tolerance in the future, both to support projects that need it and to help onboard new users to the network.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Privacy</h2>
+            <p class="section-paragraph">Darkchain supports advanced privacy features natively, which can be used to protect data on the network. For example, zero-knowledge proofs (ZKPs) can be used to hide an account's entire state, or to facilitate private transactions between two parties. These features are not enabled everywhere by default, but they can be used by any account that chooses to opt-in.</p>
+            <p class="section-paragraph">ZKPs can be used to shield any part of a message, and they can also be used to protect the state of a smart contract. This is a powerful tool for privacy and security, and it's a great way to support use cases that require discretion such as voting, private business deals, personal finances, and other sensitive applications. Learn more about Darkchain's support for <a href="#" class="click-animate">zero-knowledge proofs</a> in the Guides.</p>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">ZK proofs are optional</h2>
+            <p class="special-paragraph">Note that zero-knowledge proofs aren't a good fit for all use cases, and they can't be used to hide everything about an account. For example, the entire network will always be able to see the amount of tokens in an account, and it will always be able to see the amount of heat in an account. However, zk-STARKs can be used to hide the contents of an account's state, which can be useful for things like private messaging, private voting, and private transactions.</p>
+        </div>
+        <section>
+            <h2 class="section-heading">Tokens</h2>
+            <p class="section-paragraph">Darkchain offers native, first-class support for fungible and non-fungible tokens (NFTs). Fungible tokens are the most common type of token, and they can be used to represent any kind of asset, including fiat currencies, commodities, and other digital assets. NFTs can be used to represent individual things, like the deed to a specific property or a person's identity. NFTs are also used to uniquely represent digital items, such as digital collectibles, art, and other assets that are unique in some way.</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Fungible </strong> tokens are tokens that are fundamentally identical to one another and can be exchanged on a 1:1 basis. They're used to represent any kind of asset, including fiat currencies, commodities, and other digital assets.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Non-fungible </strong>tokens are tokens that are fundamentally unique and as such aren't necessarily exchanged for other NFTs or objectively valued. They're used to represent individually identifiable assets, such as the deed to a house, a piece of digital art, or a <a href="#" class="click-animate">PSA 10 1st Edition Charizard.</a></p>
+                </li>
+            </ul>
+            <p class="section-paragraph">Because these token standards are built into the protocol, they're ready to use off-the-shelf without any custom logic. This means it's easy to develop applications that require fungible tokens and/or NFTs, such as decentralized finance projects and digital collectibles, without writing their own implementations. It also means that all tokens are interoperable by design, which is a huge advantage for developers and users alike. Developers can focus on building their applications instead of worrying about token standards, and users can easily move their tokens between applications without having to worry about compatibility.</p>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">Need more power?</h2>
+            <p class="special-paragraph">Darkchain's token standards are built into the protocol and can be used with zero customization, but they can also be extended to support additional features, such as custom transfer logic and dynamic supply mechanisms.</p>
+        </div>
+        <section>
+            <h2 class="section-heading">Security</h2>
+            <p class="section-paragraph">Darkchain employs a combination of techniques to ensure the integrity and availability of the network. The primary security mechanisms are:</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Heat </strong> helps protect the network from spam and other attacks.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Cryptographic Signatures</strong> are used to verify the identity of the sender and ensure that the contents of the transaction have not been modified.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Hashing </strong> is used to, among other things, verify the integrity of messages, resources, and the global network state.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Proof-of-Stake </strong>consensus is used to ensure that the interests of the network are aligned with the interests of its participants.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Overwatch</strong>is a community-powered system used to ensure that the network remains safe and accessible.</p>
+                </li>
+            </ul>
+            <p class="section-paragraph">Darkchain is designed to make common forms of attack, such as spam or denial-of-service (DoS), economically and/or technically infeasible while remaining generally free to use. The ledger employs a cryptographic hashing scheme that prevents malicious actors from forging or reorganizing history, and ledger entries are cryptographically signed to prevent tampering or impersonation. But it's important to note that no technology is ever 100% secure, and Darkchain is no exception. This is a new network in a nascent sector, and we're still in the early stages of development. As such, it's important to proceed with caution and to take every appropriate security precaution when using the network.</p>
+            <p class="section-paragraph">We're constantly working to strengthen security, and we're super responsive to feedback and input from the community. The entire community benefits when we work together to improve the security of the network, so please don't hesitate to reach out if you have any questions or concerns.</p>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">Security is a journey, not a destination</h2>
+            <p class="special-paragraph">We've taken great care to design and implement a secure network, but it's impossible to predict every possible attack vector. As the network grows, so will the threat landscape, and we'll need to adapt to new challenges as they arise. This is a journey we're all on together, and we'll need to work together to ensure that the network remains safe and accessible.</p>
+        </div>
+        <section>
+            <h2 class="section-heading">Governance</h2>
+            <p class="section-paragraph">Darkchain is governed by the<strong> Darkchain Foundation</strong>, a nonprofit organization that was formed to support and promote the network. The Foundation is responsible for managing the network's development, ensuring the integrity of the network, and supporting the growth of the Darkchain ecosystem. As Darkchain matures the Foundation intends to delegate most of its responsibilities to the community, but it will always retain some role in the governance of the network.</p>
+            <p class="section-paragraph">The Foundation is governed by a Council that is responsible for making decisions on behalf of the Foundation, and it's also responsible for managing the Foundation's assets. The Council is intended to be a diverse group of individuals who are committed to the success of the network, elected by and accountable to the community.</p>
+            <p class="section-paragraph">The Foundation also provides a number of services to the community, including:</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Hosted Validators </strong>that are open to the public and available for use by anyone with an internet connection. These nodes are intended to support the growth of the network and to help onboard new users, and they're distributed across the globe to ensure that they're accessible all around the world.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Hosted Gateways </strong>that are open to the public and available for use by anyone with an internet connection. These gateways provide a simple, easy-to-use API interface for interacting with the network, and they're distributed across the globe to ensure that they're accessible everywhere.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Developer Tools </strong>that are open to the public and available for use by anyone. These tools are intended to help onboard new developers and to make it easier for them to build applications on the network.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Developer support </strong>for teams building on the network, including technical documentation, tutorials, and other resources. The Foundation also offers grants to support the development of open-source projects.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Community engagement </strong> including community events, social media, and other outreach efforts. The Foundation also offers grants to support community events and initiatives.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Education and outreach </strong> for the Darkchain community, including creation and grants for educational resources, walkthroughs, and broader outreach efforts.</p>
+                </li>
+            </ul>
+        </section>
+        <div class="special-div">
+            <h2 class="special-heading">The Foundation is accountable to the community</h2>
+            <p class="special-paragraph">The Foundation exists to serve the community, and it's committed to being transparent and responsive to community feedback and input.</p>
+        </div>
+        <section>
+            <h2 class="section-heading">Roadmap</h2>
+            <p class="section-paragraph">The Darkchain Foundation is committed to the long-term success of Darkchain, and we're excited to share our roadmap with the community. The Foundation's roadmap is intended to be a living document that is updated regularly as the needs of the community evolve and as the network matures. The Foundation is committed to working closely with the community to ensure that the roadmap is responsive to community needs and priorities.</p>
+            <p class="section-paragraph">The Foundation's roadmap is organized into three phases:</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><strong>Phase 1 </strong>includes the initial launch of the network and the creation of the Foundation. It also includes the development of the initial set of tools and services that will enable the launch of a public testnet.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Phase 2 </strong>includes the development of the infrastructure that will support the growth of the Darkchain ecosystem. It also includes the creation of a governance framework that will enable the Foundation to transition to a community-led governance model.</p>
+                </li>
+                <li>
+                    <p class="section-paragraph"><strong>Phase 3 </strong>marks the end of our initial development goals and the beginning of the never-ending journey to improve, which includes the ongoing growth of the ecosystem and community as well as the continued development of the network.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="section-heading">Phase 1</h2>
+            <p class="section-paragraph">Darkchain is currently in <strong>Phase 1</strong> of development, and it's expected that this phase will last through the end of 2022.</p>
+            <p class="section-paragraph">The first phase of the Foundation's roadmap includes the initial launch of the network and the creation of the Foundation. It also includes the development of the initial set of tools and services that will enable the launch of a public testnet.</p>
+            <p class="section-paragraph">During this phase we're laser focused on building a solid framework for the future. While the platform technically "works" today, it's not stable and isn't ready for production use. It's not a time for the community to rely on the network for much more than experimentation and exploration. In other words, this is a great opportunity to get started with Darkchain, but it's not safe to store any real value on the network just yet.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Phase 2</h2>
+            <p class="section-paragraph">The next phase of development,<strong> Phase 2</strong>, is intended to be a time to build and experiment with production use cases. This phase is also intended to be a time for the community to provide feedback and input on the direction of the network. Phase 2 is still about experimentation and exploration, but it's also a time to start building real-world applications on the network.</p>
+            <p class="section-paragraph">During this phase we'll be focused on building the infrastructure that will support the growth of the Darkchain ecosystem. It also includes the creation of a governance framework that will enable the Foundation to transition to a community-led governance model.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Phase 3</h2>
+            <p class="section-paragraph">The final leg of our journey together begins with<strong> Phase 3</strong>, and it signals that the network is ready for real-world applications and use cases. In this phase the network is stable and reliable, and it's ready for production use. Community members and teams are deeply engaged and helping to chart the path forward. The Foundation is still very actively supporting the network and the community, but it will also begin to transition to a community-led governance model.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Later Phase</h2>
+            <p class="section-paragraph">This roadmap is intended to be a living document that is updated regularly as the needs of the community evolve and as the network matures. The Foundation is committed to working closely with the community to ensure that the roadmap is responsive to community needs and priorities.</p>
+        </section>
+        <section>
+            <h2 class="section-heading">Community</h2>
+            <p class="section-paragraph">One of Darkchain's core principles is that the community is the beating heart of the network. The Darkchain Foundation is committed to supporting the growth of the community, and we're excited to be approaching the stage where we can start sharing more about what we've been working on!</p>
+            <p class="section-paragraph">We'll be actively improving our engagement efforts very soon. We're committed to supporting the growth of the Darkchain ecosystem, and we're always looking for ideas to support and invigorate the community.</p>
+            <ul>
+                <li>
+                    <p class="section-paragraph"><a href="#" class="click-animate">Follow @Darkchain</a>and join <a href="#" class="click-animate">discord.gg/Darkchain </a>to stay up to date on the latest news and developments. (We're just now starting to come out of stealth mode, so we don't have a lot shared just yet. We'll be ramping up our social media presence soon.)</P>
+                </li>
+            </ul>
+        </section>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <div id="share-buttons">
+            <a href="#" class="share-button"><i class="fab fa-discord"></i></a>
+            <a href="#" class="share-button"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+        </div>
+        <script>
+            // JavaScript code for positioning share buttons
+            const shareButtons = document.getElementById('share-buttons');
+            window.addEventListener('scroll', () => {
+                const mainHeight = document.querySelector('main').offsetHeight;
+                const windowHeight = window.innerHeight;
+                const scrollTop = window.scrollY;
+
+                if (scrollTop + windowHeight > mainHeight) {
+                    shareButtons.style.bottom = `${windowHeight - (mainHeight - scrollTop) + 20}px`;
+                } else {
+                    shareButtons.style.bottom = '20px';
+                }
+            });
+        </script>
+        </main>
+    </body>
+</html>
